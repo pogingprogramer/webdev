@@ -1,0 +1,954 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 95px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    height: auto;
+    margin: 0%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    --sb-track-color: #3c3839;
+    --sb-thumb-color: #cabdb0;
+    --sb-size: 14px;
+    position: relative;
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+}
+
+body::-webkit-scrollbar{
+    width: var(--sb-size)
+}
+ 
+body::-webkit-scrollbar-track{
+    background: var(--sb-track-color);
+    border-radius: 0%;
+}
+ 
+body::-webkit-scrollbar-thumb{
+    background: var(--sb-thumb-color);
+    border-radius: 0%;
+}
+
+header{
+    position: relative;
+    z-index: 2;
+}
+
+
+nav{
+    position: relative;
+    z-index: 2;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    position: relative;
+    z-index: 1;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.SidebarIcon{
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    z-index: 20;
+    top: 30px;
+    left: 23px;
+    cursor: pointer;
+}
+
+
+#Open:checked ~ #SidebarMenu{
+    transform: translateX(0);
+}
+
+
+.wrapper{
+    height: 3px;
+    background-color: #3C3839;
+    transition: all 0.5s;
+}
+
+
+.wrapper.second, .wrapper.third{
+    margin-top: 12px;
+}
+
+
+#Open:checked ~ .SidebarIcon > .wrapper.second{
+    opacity: 0;
+}
+
+
+#Open:checked ~ .SidebarIcon > .wrapper.first{
+    transform: rotate(315deg);
+    margin-top: 17px;
+}
+
+
+#Open:checked ~ .SidebarIcon > .wrapper.third{
+    transform: rotate(-315deg);
+    margin-top: -18px;
+}
+
+#SidebarMenu{
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    margin-top: 97px;
+    transform: translateX(-250px);
+    background-color: #3C3839;
+    transition: transform 300ms ease-in-out;
+}
+
+.MenuIcon{
+    width: auto;
+    left: 0px;
+    top: 36px;
+    font-size: 18px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    position: fixed;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.MenuIcon li{
+    color: #3C3839;
+}
+
+
+.MenuIcon li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 97px;
+    position: relative;
+}
+
+.HeaderBackground{
+    width: 100vw;
+    height: 97px;
+    left: 0;
+    top: 0;
+    background: #e8dacd;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+}
+
+.Logo{
+    width: 62px;
+    height: 72px;
+    left: 50%;
+    top: 12px;
+    position: fixed;
+    transform: translateX(-50%);
+}
+
+#centeredText{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.FeaturedImageBanner{
+    width: 100svw;
+    height: 53.5rem;
+    background: #e8dacd;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#FeaturedImage{
+    object-fit: fill;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+#Main{
+    width: 100svw;
+    height: 82px;
+    position: relative;
+    text-align: center;
+}
+
+#Main h1{
+    position: relative;
+    text-align: center;
+    position: relative;
+    color: #3C3839;
+    font-size: clamp(40px, 4vw, 160px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700px;
+    word-wrap: break-word;
+}
+
+#Main p{
+    text-align: center;
+    position: relative;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 40px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin: 15px;
+    padding: 15px;
+}
+
+#Background1{
+    position: relative;
+    background: #E8DACD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.Button1{
+    height: 62px;
+    width: auto;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+    border: 2.76px #3C3839 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SectionBackground{
+    width: 100vw;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    background: #ffffff;
+    justify-items: center;
+}
+
+.containerabout{
+    vertical-align: auto;
+    top: 0px;
+    width: auto;
+    height: auto;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    margin: 50px;
+}
+
+#AboutUsRectangle{
+    background: #E8DACD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    position: relative;
+    grid-row: 1/2;
+    grid-column: 2;
+    text-align: center;
+    vertical-align: center;
+    object-fit: contain;
+    padding: 25px;
+}
+
+#AboutUsRectangle h2{
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 45px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+}
+
+#AboutUsRectangle p{
+    text-align: justify;
+    color: #3C3839;
+    font-size: auto;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    font-weight: 400;
+    font-size: clamp(10px, 3vw, 30px);
+    width: auto;
+    margin: 45px;
+}
+
+#ImageFormat{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.IconBG{
+    width: 169.87px;
+    height: 169.87px;
+    position: relative;
+    background: #EEE2D0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 9999px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.IconImages{
+    width: 170px;
+    height: 170px;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 9999px;
+}
+
+.TextFontTitle{
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 40px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin: 0px -35px 0px -35px;
+    z-index: 1;
+}
+
+.TextFontTitle2{
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 35px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin: 0px -35px 0px -35px;
+    z-index: 1;
+    top: 25px;
+}
+
+#MenuBackground{
+    width: 100vw;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    display: grid;
+    justify-items: center;
+    padding: 125px;
+}
+
+.MenuFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.fillerflex{
+    flex-basis: 50px;
+}
+
+#centerContent{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+.Button2{
+    height: 70px;
+    width: auto;
+    position: relative;
+    background: #EEE2D0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+    border: 2.76px #3C3839 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#buttonText2{
+    color: #3C3839;
+    font-size: 18px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+#buttonText1{
+    color: #3C3839;
+    font-size: 18px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.ReviewsBackground{
+    position: relative;
+    top: 0px;
+    height: 576px;
+    display: grid;
+    justify-content: center;
+}
+
+.ReviewsBackground p{
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 25px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    width: auto;
+    margin: 65px;
+}
+
+body {
+    background: #ffffff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper {
+    width: 750px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-slide {
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #E8DACD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3C3839;
+}
+
+.autoplay-progress {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transform: scaleX(-1);
+    font-weight: bold;
+}
+
+.autoplay-progress .progressBar {
+    background-color: #777777;
+    width: 100%;
+    height: 100%;
+}
+
+.GalleryBackground{
+    width: 100vw;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    padding: 150px;
+}
+
+.ImageSize{
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    object-fit: contain;
+    cursor: zoom-in;
+}
+
+.ImageSize:hover{
+    transform: scale(1.05);
+    transition: 1s ease;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ label > img{
+    transform: scale
+}
+.GalleryRectangle{
+    background: #E8DACD;
+    position: relative;
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 25px;
+}
+
+.GalleryFlexRow {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+.GalleryFlexColumn {
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.GalleryFlexColumn img{
+    margin-top: 8px;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+  }
+
+#LocationFlex{
+    top: 0px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 50px;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.TextFontTitle{
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 40px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin: 0px -35px 0px -35px;
+    z-index: 1;
+}
+
+.TextFontRead{
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 30px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin: 0px -35px 0px -35px;
+    z-index: 1;
+    top: 35px;
+}
+
+#VisitRectangle{
+    width: auto;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    background: #E8DACD;
+}
+
+#LocationMap{
+    width: 500px;
+    height: 500px;
+    top: 0px;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+#VisitUs{
+    position: relative;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 50px;
+}
+
+#VisitUs h1{
+    top: 55px;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 40px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin: 0px -35px 0px -35px;
+    z-index: 1;
+    position: relative;
+}
+
+#VisitUs p{
+    top: 30px;
+    position: relative;
+    text-align: center;
+    color: #3C3839;
+    font-size: clamp(20px, 4vw, 25px);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    width: auto;
+    margin: 65px;
+}
+
+#LocationBackground{
+    width: 100vw;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    display:grid;
+    justify-content: center;
+}
+
+#FooterBackground1{
+    width: 100vw;
+    height: 273px;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #E8DACD;
+}
+
+.FooterRectangle{
+    top: 75px;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    vertical-align: center;
+}
+
+#ContactUs, #ContactNumber, #Email{
+    left: 55vw;
+    width: 210px;
+    position: relative;
+}
+
+#ContactUs{
+    top: -235px;
+}
+
+#ContactNumber{
+    top: -210px;
+}
+
+#Email{
+    top: -185px;
+}
+#Email::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #3C3839;
+    transition: all .5s;
+}
+
+
+#Email:hover::before{
+    width: 100%;
+}
+
+.Line, #FooterLine{
+    width: 1114px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: -162.5px;
+    position: relative;
+    justify-content: center;
+    border: 3px #3C3839 solid;
+    backdrop-filter: blur(4px);
+}
+
+.IconButton, #FacebookButton, #InstagramButton{
+    width: 56px;
+    height: 56px;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.footer1{
+    height: 325px;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.footer2{
+    height: auto;
+    overflow: hidden;
+    width: 100vw;
+}
+
+#positioningforfooter{
+    position: relative;
+    left: 54vw;
+    top: -150px;
+}
+
+
+#FacebookButton:hover{
+    transform: scale(0.9);
+}
+
+
+.IconStyle, #FacebookBG, #InstagramBG{
+    width: 56px;
+    height: 56.5px;
+    position: relative;
+    background: #3C3839;
+    border-radius: 5px;
+}
+
+.IconImageStyle, #FacebookIcon, #InstagramIcon{
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.IconButton, #InstagramButton{
+    position: relative;
+    left: 80%
+}
+
+
+#InstagramButton:hover{
+    transform: scale(0.9);
+}
+
+
+.IconStyle, #InstagramBG{
+    left: 0px;
+    top: 0px;
+}
+
+
+.IconImageStyle, #InstagramIcon{
+    left: 14px;
+    top: 14px;
+}
+
+#miniflexforfbandins{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 50px;
+    gap: 10px;
+}
+
+.TextFontBody{
+    position: relative;
+    text-align: justify;
+    color: #3C3839;
+    font-size: 18px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    width: auto;
+}
+
+.Logo2{
+    width: 122px;
+    height: 122px;
+    left: 35vw;
+    top: -365.5px;
+    position: relative;
+}
+
+#FooterBackground2{
+    width: 100vw;
+    height: 59px;
+    left: 0px;
+    top: -250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3C3839;
+    font-size: 18px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.rectanglesMenu{
+    height: 400px;
+    width: 275px;
+    background-color: #E8DACD;
+    position: relative;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 30px;
+}
+
+#CoffeeBackground{
+    position: relative;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    height: auto;
+}
+
+.CoffeeFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#MilkshakeBackground{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.MilkshakeFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#LemonadeBackground{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.LemonadeFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#LatteBackground{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.LatteFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#TeaBackground{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.TeaFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#LClassicsBackground{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.LClassicsFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#MealsBackground{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.MealsFlex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 3rem;
+    padding: 4rem;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#FooterBackground2nd{
+    width: 100vw;
+    height: 59px;
+    left: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3C3839;
+    font-size: 18px;
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
